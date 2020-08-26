@@ -1,6 +1,0 @@
-[Unit]
-Description=Undervolt
-
-[Service]
-Type=oneshot
-ExecStart=/home/vsibille/Software/undervolt/undervolt.py -v --gpu -70 --core -130 --cache -130 --uncore -130 --analogio -100
