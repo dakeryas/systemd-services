@@ -1,0 +1,10 @@
+[Unit]
+Description=udevmon
+Wants=systemd-udev-settle.service
+After=systemd-udev-settle.service
+
+[Service]
+ExecStart=nice -n -20 udevmon -c /home/vsibille/.config/udevmon/udevmon.yaml
+
+[Install]
+WantedBy=multi-user.target
