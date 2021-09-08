@@ -1,0 +1,10 @@
+[Unit]
+Description=Apply GPU powersave
+
+[Timer]
+Unit=powersave_gpu.service
+# Wait 1 minutes after boot before first applying
+OnBootSec=1min
+
+[Install]
+WantedBy=timers.target

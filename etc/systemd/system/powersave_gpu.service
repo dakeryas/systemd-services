@@ -1,0 +1,10 @@
+[Unit]
+Description=Power save on discrete GPU
+
+[Service]
+Type=oneshot
+ExecStart=echo auto > /sys/bus/pci/devices/0000:01:00.0/power/control
+
+
+[Install]
+WantedBy=timers.target
