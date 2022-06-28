@@ -1,0 +1,6 @@
+[Unit]
+Description=Update mac AUR package from Monkey's Audio website 
+
+[Service]
+Type=oneshot
+ExecStart=%h/Documents/perso/audio/mac-aur/update_SDK.zsh
