@@ -3,10 +3,8 @@ Description=Run AUR's mac update service
 
 [Timer]
 Unit=mac_aur.service
-# Wait 1 minutes after boot before first applying
-OnBootSec=20min
-# Run every 30 seconds
-OnUnitActiveSec=3h
+OnStartupSec=15min
+OnUnitActiveSec=4h
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=timers.target

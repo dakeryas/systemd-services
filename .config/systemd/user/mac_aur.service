@@ -1,6 +1,11 @@
 [Unit]
-Description=Update mac AUR package from Monkey's Audio website 
+Description=Update AUR's mac package from Monkey's Audio website
+Wants=network-online.target
+After=network-online.target nss-lookup.target
 
 [Service]
 Type=oneshot
-ExecStart=%h/Documents/perso/audio/mac-aur/update_SDK.zsh
+ExecStart=%h/Documents/perso/audio/mac-aur/update_MAC_SDK.zsh
+
+[Install]
+WantedBy=network-online.target
