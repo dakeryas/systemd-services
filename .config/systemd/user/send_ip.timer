@@ -1,0 +1,10 @@
+[Unit]
+Description=Run service sending public IP upon change
+
+[Timer]
+Unit=send_ip.service
+OnStartupSec=20min
+OnUnitActiveSec=5min
+
+[Install]
+WantedBy=timers.target
